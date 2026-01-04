@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { width: 300px; padding: 15px; font-family: 'Segoe UI', sans-serif; color: #333; }
+        h3 { margin: 0 0 15px 0; display: flex; align-items: center; gap: 8px; }
+        label { font-size: 12px; font-weight: bold; display: block; margin-bottom: 5px; color: #555; }
+        
+        input, select { width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; }
+        select { background-color: #f9f9f9; cursor: pointer; }
+        
+        button { width: 100%; padding: 10px; background: #667eea; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; transition: background 0.2s; }
+        button:hover { background: #5a6fd6; }
+        
+        #status { color: green; font-size: 12px; font-weight: bold; margin-top: 10px; display: none; text-align: center; }
+        .footer { font-size: 11px; color: #888; margin-top: 15px; border-top: 1px solid #eee; padding-top: 10px; }
+        a { color: #667eea; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <h3>✨ Prompt Polish</h3>
+    
+    <label for="modeSelect">Select Mode</label>
+    <select id="modeSelect">
+        <option value="build">🛠️ Build (Code & Projects)</option>
+        <option value="learn">🧠 Learn (Concepts & Theory)</option>
+        <option value="debug">🐛 Debug (Fixes & Analysis)</option>
+    </select>
+
+    <label for="apiKey">Gemini API Key</label>
+    <input type="password" id="apiKey" placeholder="Paste key here...">
+    
+    <button id="saveBtn">Save Settings</button>
+    <div id="status">✅ Settings Saved!</div>
+
+    <div class="footer">
+        1. Get a free key from <a href="https://aistudio.google.com/app/apikey" target="_blank">Google AI Studio</a>.<br>
+        2. Select your mode.<br>
+        3. Click Save.
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
